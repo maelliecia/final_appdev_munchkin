@@ -61,9 +61,10 @@ const TableRecipes = () => {
   }, []);
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewRecipe((prevRecipe) => ({ ...prevRecipe, [name]: value }));
-  };
+    const { name, value, type, checked } = e.target;
+    const inputValue = type === 'checkbox' ? checked : value;
+    setNewRecipe((prevRecipe) => ({ ...prevRecipe, [name]: inputValue }));
+  };  
 
   const handleToggleModal = (recipe = null) => {
     setEditingRecipe(recipe);

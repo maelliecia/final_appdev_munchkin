@@ -71,7 +71,7 @@ function LogInForm() {
         if (data.type === 'user') {
           navigate('/u/recipes');
         } else if (data.type === 'admin') {
-          navigate('/a/recipes');
+          navigate('/a/users');
         }
       } else {
         handleShowModal();
